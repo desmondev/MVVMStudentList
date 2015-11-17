@@ -10,7 +10,6 @@ namespace MVVMStudentList.View
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel.MainWindowViewModel();
         }
     }
 }
