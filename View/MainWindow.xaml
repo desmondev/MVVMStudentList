@@ -1,8 +1,11 @@
 ﻿<Window x:Class="MVVMStudentList.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewModel="clr-namespace:MVVMStudentList.ViewModel"
         Title="MainWindow" Height="600" Width="400" MinWidth="400" MinHeight="600" MaxWidth="400" MaxHeight="1600">
-
+    <Window.DataContext>
+        <viewModel:MainWindowViewModel></viewModel:MainWindowViewModel>
+    </Window.DataContext>
     <StackPanel>
 
         <StackPanel.Resources>
@@ -23,26 +26,22 @@
                                 <Setter Property="Margin" Value="0,2,5,2"/>
                             </Style>
                         </StackPanel.Resources>
-                        <TextBlock Text="{Binding Path=Imie}" />
-                        <TextBlock Text="{Binding Path=Nazwisko}"/>
-                        <TextBlock Text="{Binding Path=IndexNo}" Foreground="Blue"/>
+                        <TextBlock Text="{Binding Path=FirstName}" />
+                        <TextBlock Text="{Binding Path=LastName}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
 
         </ListBox>
         <Label Content="Imie:"/>
-        <TextBox x:Name="tbImie" Text="{Binding Imie}" />
+        <TextBox x:Name="tbImie" Text="{Binding FirstName}" />
         <Label Content="Nazwisko:"/>
-        <TextBox Name="tbNazwisko" Text="{Binding Nazwisko}" />
+        <TextBox Name="tbNazwisko" Text="{Binding LastName}" />
 
         <StackPanel Height="100" VerticalAlignment="Bottom">
             <Button Name="btAdd" CommandParameter="add" Content="Dodaj" />
             <Button x:Name="btDelete" CommandParameter="delete" Content="Usuń" Margin="5,5,5.333,5" />
             <Button x:Name="btUpdate" CommandParameter="update" Content="Aktualizuj" Margin="5,5,5.333,5"/>
         </StackPanel>
-
-
-
     </StackPanel>
 </Window>
