@@ -12,5 +12,13 @@ namespace MVVMStudentList.Model
                 return db.Students.ToList();
             }
         }
+
+        public List<Group> getGroups()
+        {
+            using (var db = new StorageContext())
+            {
+                return db.Groups.ToList();
+            }
+        }
     }
 }

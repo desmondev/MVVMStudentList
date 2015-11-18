@@ -16,8 +16,8 @@
             </Style>
         </StackPanel.Resources>
 
-        <ComboBox ItemsSource="{Binding Groups}" SelectedItem ="{Binding SelectedGroup }" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" ></ComboBox >
-        <ListBox ItemsSource="{Binding Students}" SelectedItem="{Binding Path=SelectedStudent , Mode=TwoWay}" SelectionMode ="Single" MinHeight="200" Margin="30,0" Height="350">
+        <ComboBox ItemsSource="{Binding Groups}" SelectedItem ="{Binding SelectedGroup }" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" ></ComboBox >
+        <ListBox ItemsSource="{Binding Students}" SelectedItem="{Binding Path=SelectedStudent , Mode=TwoWay}" SelectionMode ="Single" MinHeight="200" Margin="30,0" Height="300">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
