@@ -70,6 +70,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Migrations\201511172302280_InitialCreate.cs" />
+    <Compile Include="Migrations\201511172302280_InitialCreate.Designer.cs">
+      <DependentUpon>201511172302280_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181329585_AddStudentIndexNo.cs" />
+    <Compile Include="Migrations\201511181329585_AddStudentIndexNo.Designer.cs">
+      <DependentUpon>201511181329585_AddStudentIndexNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511260031002_AddConstraints.cs" />
+    <Compile Include="Migrations\201511260031002_AddConstraints.Designer.cs">
+      <DependentUpon>201511260031002_AddConstraints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Group.cs" />
     <Compile Include="Model\Storage.cs" />
     <Compile Include="Model\StorageContext.cs" />
@@ -96,6 +109,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201511172302280_InitialCreate.resx">
+      <DependentUpon>201511172302280_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181329585_AddStudentIndexNo.resx">
+      <DependentUpon>201511181329585_AddStudentIndexNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511260031002_AddConstraints.resx">
+      <DependentUpon>201511260031002_AddConstraints.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -108,7 +130,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
